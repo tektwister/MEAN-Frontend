@@ -1,0 +1,87 @@
+<p>
+  User works!
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Create
+    </div>
+    <div class="card-body">
+      <form class="" [formGroup]="loginForm" (ngSubmit)=onSubmit(loginForm.value)>
+        <div class="row">
+          <input type="email" class="form-control" placeholder="Your Email" formControlName="email_id"
+            [ngClass]="{'is-invalid': submitted &&f.email_id.errors}">
+          <div *ngIf="submitted && f.email_id.errors" class="invalid-feedback">
+            <div *ngIf="f.email_id.errors.required">Email_id is required</div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <input type="password" class="form-control" placeholder="Your Password" formControlName="password"
+            [ngClass]="{'is-invalid': submitted &&f.password.errors}">
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <input type="submit" class="form-control" value="{{ this.Button }}">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-10">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Users</h4>
+      </div>
+      <div class="card-content collapse show">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Sl. No</th>
+                  <th>Email</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let participant of participants; let i = index;">
+
+                  <th scope="row">{{i+1}}</th>
+                  <td>{{participant.username}}</td>
+                  <td>
+                    <button class="btn btn-danger" (click)="deleteParticipant(participant._id)">
+                      X
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-1"></div>
+</div> -->

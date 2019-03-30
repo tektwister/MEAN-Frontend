@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarToggle"
+    aria-controls="navBarToggle" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">FrontEnd</a>
+  <div class="collapse navbar-collapse float-right" id="navBarToggle">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="nav nav-line nav-color-secondary">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+
+        <li class="nav-item" *ngIf="!auth.isLoggedIn(); else loggedIn">
+          <a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['active']"
+            [routerLinkActiveOptions]="{exact:true}">Login</a>
+        </li>
+        <ng-template #loggedIn>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact:true}">{{ currentUser }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact:true}" (click)="logout()">Log out</a>
+          </li>
+        </ng-template>
+      </ul>
+    </form>
+  </div>
+</nav>

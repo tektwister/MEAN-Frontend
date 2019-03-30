@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Login
+    </div>
+    <div class="card-body">
+      <form class="" [formGroup]="loginForm" (ngSubmit)=onSubmit(loginForm.value)>
+        <div class="row">
+          <input type="email" class="form-control" placeholder="Your Email" formControlName="email_id"
+            [ngClass]="{'is-invalid': submitted &&f.email_id.errors}">
+          <div *ngIf="submitted && f.email_id.errors" class="invalid-feedback">
+            <div *ngIf="f.email_id.errors.required">Email_id is required</div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <input type="password" class="form-control" placeholder="Your Password" formControlName="password"
+            [ngClass]="{'is-invalid': submitted &&f.password.errors}">
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <input type="submit" class="form-control" value="{{ this.Button }}">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
